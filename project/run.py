@@ -30,8 +30,14 @@ def main():
         for service, offset in (("erp", 1), ("wms", 2), ("tms", 3), ("hub", 0)):
             handle = (logs / f"{service}.log").open("a", encoding="utf-8")
             handles.append(handle)
-            processes.append(subprocess.Popen([sys.executable, "-m", "uvicorn", f"services.{service}:app",
-                "--host", "127.0.0.1", "--port", str(port + offset), "--log-level", "warning"],
+            host = "0.0.0.0" if service == "hub" else "127.0.0.1"
+            processes.append(subprocess.Popen([
+                sys.executable, "-m", "uvicorn",
+                f"services.{service}:app",
+                "--host", host,
+                "--port", str(port + offset),
+                "--log-level", "warning"
+                ],
                 cwd=ROOT, stdout=handle, stderr=handle))
         url = f"http://127.0.0.1:{port}"
         opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
