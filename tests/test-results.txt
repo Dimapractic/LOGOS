@@ -1,0 +1,15 @@
+test_01_normal_flow_and_delivery (test_integration.IntegrationTests.test_01_normal_flow_and_delivery) ... ok
+test_02_lost_confirmation_no_duplicate (test_integration.IntegrationTests.test_02_lost_confirmation_no_duplicate) ... ok
+test_03_exhaustion_manual_retry (test_integration.IntegrationTests.test_03_exhaustion_manual_retry) ... ok
+test_04_compensation_and_business_error (test_integration.IntegrationTests.test_04_compensation_and_business_error) ... ok
+test_05_restart_resumes_persisted_job (test_integration.IntegrationTests.test_05_restart_resumes_persisted_job) ... ok
+test_06_successful_sla_violation (test_integration.IntegrationTests.test_06_successful_sla_violation) ... ok
+test_07_idempotency_key_conflict (test_integration.IntegrationTests.test_07_idempotency_key_conflict) ... ok
+test_08_validation (test_integration.IntegrationTests.test_08_validation) ... ok
+test_09_timeout_after_commit_no_double_reserve (test_integration.IntegrationTests.test_09_timeout_after_commit_no_double_reserve) ... ok
+test_10_erp_outbox_survives_hub_downtime (test_integration.IntegrationTests.test_10_erp_outbox_survives_hub_downtime) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 38.512s
+
+OK

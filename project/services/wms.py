@@ -1,0 +1,2 @@
+from services.systems import make_app
+app = make_app("wms")
